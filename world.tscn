@@ -1,6 +1,7 @@
-[gd_scene load_steps=8 format=3 uid="uid://b628p4msw1oig"]
+[gd_scene load_steps=9 format=3 uid="uid://b628p4msw1oig"]
 
-[ext_resource type="PackedScene" uid="uid://bs022ydyj6eqv" path="res://car_1.tscn" id="1_f3sb7"]
+[ext_resource type="Texture2D" uid="uid://djc32nbux0g7o" path="res://icon.svg" id="1_f3sb7"]
+[ext_resource type="PackedScene" uid="uid://bs022ydyj6eqv" path="res://car_1.tscn" id="2_fj7yv"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_gv5m4"]
 sky_top_color = Color(0.384455, 0.485805, 0.483506, 1)
@@ -19,6 +20,8 @@ glow_enabled = true
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gv5m4"]
 albedo_color = Color(0.514138, 0.411393, 0.206433, 1)
+albedo_texture = ExtResource("1_f3sb7")
+uv1_scale = Vector3(20, 20, 20)
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_f3sb7"]
 
@@ -44,4 +47,4 @@ mesh = SubResource("PlaneMesh_f3sb7")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Ground/StaticBody3D"]
 shape = SubResource("ConvexPolygonShape3D_f3sb7")
 
-[node name="VehicleBody3D" parent="." instance=ExtResource("1_f3sb7")]
+[node name="VehicleBody3D" parent="." instance=ExtResource("2_fj7yv")]
